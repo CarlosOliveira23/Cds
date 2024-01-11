@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Creative Network</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<audio id="music" autoplay>
+			<source src="music.mp3" type="audio/mpeg">
+		</audio>
+
+		<script type="text/javascript">
+			var music = document.getElementById("music");
+			music.volume = 0.2;
+			document.addEventListener("keypress",(event) => {
+				if(event.key == "p"){
+					if(music.paused){
+						music.play();
+					} else {
+						music.pause();
+					}
+				}
+			});
+		</script>
+
+		<video src="video.mp4" autoplay muted loop></video>
+	</body>
+</html>
